@@ -1,0 +1,123 @@
+.header {
+    width: 100%;
+    background-color: $second_color;
+    padding: 1rem 1rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: $third-color;
+    border-bottom: 0.3rem solid $third-color;
+
+    #{&}__leftSide {
+        margin-top: -2rem;
+        width: max-content;
+
+        & a{
+            text-decoration: none;
+            color: $third-color;
+        }
+    }
+
+    #{&}__logoImage {
+        width: 5rem;
+        float: left;
+
+    }
+
+    #{&}__title {
+        padding: 2rem 0rem 0rem 6rem;
+
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+
+    #{&}__subtitle {
+        clear: both;
+        font-size: 0.8rem;
+    }
+
+
+
+    #{&}__menu {
+
+        ul {
+            width: 100%;
+            min-width: max-content;
+            list-style-type: none;
+            display: flex;
+            justify-content: end;
+
+            li{
+            display: inline-block;
+                margin-left: 2rem;
+
+                 & a {
+             text-decoration: none;
+             color: $third-color;
+             transition: all 0.2s;
+             padding: 0.5rem;
+             border: 1px solid $third-color;
+             border-radius: 20px;
+             cursor: pointer;
+             text-align: center;
+             transition: all 0.2s;
+
+             &:hover {
+                 transform: scale(1.1);
+                 transition: all 0.2s;
+             }
+         }
+
+         .header__menu--active{
+            background-color: $third-color !important;
+            color: $primary-color !important;
+        }
+
+            }
+
+        }
+
+        
+    }
+
+}
+
+@include mobile{
+
+    .header {
+        padding: 0;
+        display: block;    
+    
+        #{&}__leftSide {
+            display: block;
+            margin: auto;
+            width: max-content;
+    
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        #{&}__menu {
+    
+    
+            ul {
+                width: max-content;
+                display: block;
+                margin: auto;
+                padding: 2rem;
+                li{
+                    margin-left: 1rem;
+    
+                     & a {
+                
+                 padding: 0.3rem;
+                     }
+                }
+    
+            }
+            
+        }
+    
+    }
+}

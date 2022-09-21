@@ -1,0 +1,130 @@
+.addOpinion {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding-top: 10vh;
+
+    #{&}__exitBtn {
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        right: 2rem;
+        top: 0.5rem;
+        text-align: end;
+        width: max-content;
+    }
+
+    #{&}__form {
+        display: grid;
+        grid-template-columns: 1;
+        position: relative;
+        padding: 2rem;
+        border-radius: 2rem;
+        background-color: $primary_color;
+        color: $third_color;
+        margin: auto;
+        width: 60%;
+
+        & select {
+            color: $third-color;
+            margin: 0.7rem 0rem;
+            border: 2px solid $third-color;
+            border-radius: 0.2rem;
+            outline: none;
+        }
+
+        & input {
+            margin: 0.7rem 0rem;
+            border: 2px solid $third-color;
+            border-radius: 0.2rem;
+            outline: none;
+
+            &:focus {
+                background-color: lightgray;
+            }
+        }
+    }
+
+    #{&}__title {
+        font-size: 1.5rem;
+    }
+
+    #{&}__ratingWrapper {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    #{&}__rating {
+        padding: 1rem;
+    }
+
+    #{&}__submit {
+        margin: auto !important;
+        cursor: pointer;
+        width: 30%;
+        background-color: green;
+        color: $primary_color;
+        border: none !important;
+        border-radius: 2rem !important;
+        font-size: 1rem;
+        padding: 1rem 0.3rem;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.2s;
+
+        }
+    }
+}
+
+
+
+@include mobile {
+    .addOpinion {
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+
+        #{&}__form {
+            display: grid;
+            grid-template-columns: 1;
+            padding: 1rem;
+            width: 80%;
+
+            & select {
+                color: $third-color;
+                margin: 0.2rem 0rem;
+                border: 2px solid $third-color;
+                border-radius: 0.2rem;
+                outline: none;
+            }
+
+            & input {
+                width: 60%;
+                margin: 0.2rem 0rem;
+            }
+
+        }
+
+        
+    #{&}__ratingWrapper {
+        display: grid;
+        grid-template-columns: 1;
+    }
+    #{&}__rating {
+        padding: 0rem;
+    }
+    
+
+        #{&}__submit {
+            width: 100%;
+        }
+    }
+}
+
+
