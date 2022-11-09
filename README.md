@@ -1,11 +1,9 @@
-# Your Best Dishes - app with opinions
-App with dishes's opinions add by users created with MySQL
+# [Your Best Dishes](http://serwer2209086.home.pl/bestDishesPage/) - app with opinions
+[App](http://serwer2209086.home.pl/bestDishesPage/) with dishes's opinions add by users created with MySQL
 
 ## General info
 This app was created to consolidate my skills that I recently received.
 App allows you to register and add new food opinions, as well as delete and filter opinions.   
-
-This project is simple Lorem ipsum dolor generator.
 	
 ## Technologies
 Project is created with:
